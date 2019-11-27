@@ -5,17 +5,20 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "babel lib -d dist",
+    "prepublishOnly": "yarn build",
     "lint": "eslint --max-warnings 0 lib"
   },
   "author": "Sam Boylett <sam.boylett@netsells.co.uk>",
   "license": "ISC",
-  "dependencies": {},
   "husky": {
     "hooks": {
       "pre-commit": "yarn lint"
     }
   },
   "devDependencies": {
+    "@babel/cli": "^7.7.4",
+    "@babel/core": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
     "@netsells/eslint-config": "^2.4.1",
     "babel-eslint": "^10.0.3",
     "eslint": "^4.10.0",
