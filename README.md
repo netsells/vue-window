@@ -11,3 +11,41 @@ the risks and can work around them, read on.**
 
 Adds a global computed `$window` responsive property which updates with the real
 window property.
+
+## Installation
+
+```javascript
+import Vue from 'vue';
+import VueWindow from '@netsells/vue-window';
+
+import store from './store';
+
+Vue.use(VueWindow, { store });
+```
+
+### NuxtJS installation
+
+Plugin:
+
+```javascript
+import Vue from 'vue';
+import { mixin } from '@netsells/vue-window';
+
+Vue.mixin(mixin);
+```
+
+Store:
+
+```javascript
+import { store as vueWindowStore } from '@netsells/vue-window';
+
+export const modules = {
+    window: vueWindowStore,
+};
+```
+
+## Usage
+
+```javascript
+this.$window.innerWidth
+```
