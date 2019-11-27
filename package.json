@@ -2,7 +2,7 @@
   "name": "@netsells/vue-window",
   "version": "1.0.0",
   "description": "Reactive window object",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "babel lib -d dist",
     "prepublishOnly": "yarn build",
